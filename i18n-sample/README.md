@@ -1,5 +1,7 @@
 # I18n Sample
 
+en/[zh](./README-ZH-CN.md)
+
 This folder contains a sample VS code extension that shows how to use the package.nls.json and the vscode-nls library for localization. For this sample, it shows two commands: Hello and Bye in English and Japanese.
 
 **Assumptions**
@@ -19,11 +21,11 @@ This folder contains a sample VS code extension that shows how to use the packag
 Localization values are only applied when running the gulp `build` task. During normally development which uses `tsc -watch` to compile no localization post processing happends. This speeds up development time.
 
 1. Ensure that you have `gulp-cli` installed globally using `npm install --global gulp-cli`.
-1. Run `npm install` to bring in the dependencies.
-1. Follow the steps at https://code.visualstudio.com/api/working-with-extensions/publishing-extension to ensure that you have installed vsce and have a publisher account.
-1. Run `gulp package` to produce a .vsix file.
-1. Install the .vsix file following the instructions at https://code.visualstudio.com/docs/editor/extension-gallery#_install-from-a-vsix
-1. Change your locale to Japanese by invoking "Configure Language" from the Command Palette.
+2. Run `npm install` to bring in the dependencies.
+3. Follow the steps at https://code.visualstudio.com/api/working-with-extensions/publishing-extension to ensure that you have installed vsce and have a publisher account.
+4. Run `gulp package` to produce a .vsix file.
+5. Install the .vsix file following the instructions at https://code.visualstudio.com/docs/editor/extension-gallery#_install-from-a-vsix
+6. Change your locale to Japanese by invoking "Configure Language" from the Command Palette.
 
 See the demo.gif file in this repository for a screencast.
 
@@ -34,8 +36,8 @@ VS Code itself uses [Transifex](https://www.transifex.com/) to manage its transl
 ## What happens behind the scenes
 
 1. The `vscode-nls-dev` module is used to rewrite the generated JavaScript.
-1. Calls of the form `localize('some_key', 'Hello')` are transformed to `localize(0, null)` where the first parameter (0, in this example) is the position of the key in your messages file.
-1. The contents of the i18n folder are transformed from key:value pairs into positional arrays.
+2. Calls of the form `localize('some_key', 'Hello')` are transformed to `localize(0, null)` where the first parameter (0, in this example) is the position of the key in your messages file.
+3. The contents of the i18n folder are transformed from key:value pairs into positional arrays.
 
 ## Considerations
 
